@@ -26,6 +26,11 @@ int main(int argc, char **argv) {
     int key;
     int operation = 0;
 
+    printf("Caesar Cipher\n");
+    printf("=============\n");
+    printf("This program can encrypt or decrypt text using the Caesar cipher.\n");
+    printf("You can also perform brute force decryption to find the key.\n\n");
+
     // Check if key is provided as a command line argument
     if (argc == 2 || argc == 3) {
         key = atoi(argv[1]);
