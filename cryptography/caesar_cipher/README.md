@@ -94,7 +94,7 @@ Tries all possible keys (0-25) and displays each result, allowing you to identif
 - Non-alphabetic characters (numbers, punctuation, spaces) remain unchanged
 - Keys can be negative or greater than 25 (they wrap around)
 - Maximum input length is 255 characters _(can be adjusted in the code if needed)_
-  - To change the maximum input length, modify the `MAX_INPUT_LENGTH` constant in the code (line 6: `#define MAX_INPUT_LENGTH 256`).
+  - To change the maximum input length, modify the `MAX_INPUT_LENGTH` constant in the code (line 16: `#define MAX_INPUT_LENGTH 256`).
 
 ## License
 
