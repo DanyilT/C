@@ -12,14 +12,17 @@
 #include <stdlib.h>
 #include <string.h>
 
+// Buffer for input (plaintext / ciphertext), can hold up to 255 characters (plus null terminator)
+#define MAX_INPUT_LENGTH 256
+
 char *caesar_encrypt(char *plaintext, int key);
 char *caesar_decrypt(char *ciphertext, int key);
 void caesar_brute_force(const char *ciphertext);
 
 int main(int argc, char **argv) {
     // Define a buffer for plaintext input and a variable for the key
-    char plaintext[256]; // Buffer for plaintext input, can hold up to 255 characters (plus null terminator)
-    char ciphertext[256]; // Buffer for ciphertext input, can hold up to 255 characters (plus null terminator)
+    char plaintext[MAX_INPUT_LENGTH];
+    char ciphertext[MAX_INPUT_LENGTH];
     int key;
     int operation = 0;
 
