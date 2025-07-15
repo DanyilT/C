@@ -14,6 +14,7 @@
 
 char *caesar_encrypt(char *plaintext, int key);
 char *caesar_decrypt(char *ciphertext, int key);
+void caesar_brute_force(const char *ciphertext);
 
 int main(int argc, char **argv) {
     // Define a buffer for plaintext input and a variable for the key
@@ -41,8 +42,10 @@ int main(int argc, char **argv) {
             operation = 1; // Encrypt
         } else if (strcasecmp(argv[2], "d") == 0 || strcasecmp(argv[2], "decrypt") == 0 || strcasecmp(argv[2], "decryption") == 0) {
             operation = 2; // Decrypt
+        } else if (strcasecmp(argv[2], "bf") == 0 || strcasecmp(argv[2], "brute-force") == 0) {
+            operation = 3; // Brute Force Decrypt
         } else {
-            fprintf(stderr, "Invalid operation. Use 'e' for encrypt or 'd' for decrypt.\n");
+            fprintf(stderr, "Invalid operation. Use 'e' for encrypt or 'd' for decrypt, or 'bf' for brute force decrypt.\n");
             return 1;
         }
     } else {
@@ -50,8 +53,9 @@ int main(int argc, char **argv) {
         printf("Choose operation:\n");
         printf("1. Encrypt\n");
         printf("2. Decrypt\n");
-        if (scanf("%d", &operation) != 1 || (operation != 1 && operation != 2)) {
-            fprintf(stderr, "Invalid choice. Please enter 1 for encryption or 2 for decryption.\n");
+        printf("3. Brute Force Decrypt\n");
+        if (scanf("%d", &operation) != 1 || (operation < 1 && operation > 3)) {
+            fprintf(stderr, "Invalid choice. Please enter 1, 2 or 3.\n");
             return 1;
         }
         while (getchar() != '\n'); // Clear the input buffer
@@ -70,7 +74,7 @@ int main(int argc, char **argv) {
         // Encrypt the plaintext using the Caesar cipher with the specified key
         caesar_encrypt(plaintext, key);
         printf("Encrypted text: %s\n", plaintext);
-    } else {
+    } else if (operation == 2) {
         // Decrypt operation
         printf("You chose to decrypt.\n");
         printf("--------------------\n");
@@ -83,6 +87,21 @@ int main(int argc, char **argv) {
         // Decrypt the ciphertext using the Caesar cipher with the specified key
         caesar_decrypt(ciphertext, key);
         printf("Decrypted text: %s\n", ciphertext);
+    } else if (operation == 3) {
+        // Brute Force Decrypt operation
+        printf("You chose to brute force decrypt.\n");
+        printf("------------------------------\n");
+
+        // Prompt the user for ciphertext input
+        printf("Enter ciphertext: ");
+        fgets(ciphertext, sizeof(ciphertext), stdin); // Read ciphertext input from the user
+        ciphertext[strcspn(ciphertext, "\n")] = '\0'; // Remove newline character
+
+        // Perform brute force decryption on the ciphertext
+        caesar_brute_force(ciphertext);
+    } else {
+        fprintf(stderr, "Invalid operation selected.\n");
+        return 1;
     }
 
     return 0;
@@ -130,4 +149,29 @@ char *caesar_encrypt(char *plaintext, const int key) {
 char *caesar_decrypt(char *ciphertext, const int key) {
     // Decrypting is just encrypting with the negative key
     return caesar_encrypt(ciphertext, -key);
+}
+
+/**
+ * Performs brute force decryption on the given ciphertext using the Caesar cipher.
+ *
+ * Tries all possible shift values (0-25) and displays each result.
+ * This helps identify the correct decryption when the key is unknown.
+ *
+ * \param ciphertext Pointer to the input string to decrypt.
+ */
+void caesar_brute_force(const char *ciphertext) {
+    char temp[strlen(ciphertext) + 1]; // Temporary buffer for each decryption attempt (+1 for null terminator)
+
+    printf("Brute force decryption results:\n");
+    printf("==============================\n");
+
+    for (int key = 0; key < 26; key++) {
+        // Copy ciphertext to temporary buffer
+        strcpy(temp, ciphertext);
+
+        // Decrypt with current key
+        caesar_decrypt(temp, key);
+
+        printf("Key %2d: %s\n", key, temp);
+    }
 }
