@@ -98,4 +98,4 @@ Tries all possible keys (0-25) and displays each result, allowing you to identif
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) file for details
+MIT License - see [LICENSE](/LICENSE) file for details
