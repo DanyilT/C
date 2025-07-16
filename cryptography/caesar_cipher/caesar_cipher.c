@@ -62,7 +62,7 @@ int main(int argc, char **argv) {
         printf("1. Encrypt\n");
         printf("2. Decrypt\n");
         printf("3. Brute Force Decrypt\n");
-        if (scanf("%d", &operation) != 1 || (operation < 1 && operation > 3)) {
+        if (scanf("%d", &operation) != 1 || (operation < 1 || operation > 3)) {
             fprintf(stderr, "Invalid choice. Please enter 1, 2 or 3.\n");
             return 1;
         }
