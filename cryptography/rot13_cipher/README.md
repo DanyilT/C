@@ -2,7 +2,7 @@
 
 A simple implementation of the ROT13 cipher in C, built using the Caesar cipher algorithm with a fixed shift of 13.
 
-## What is Caesar Cipher?
+## What is ROT13 Cipher?
 
 ROT13 ("rotate by 13 places") is a simple letter substitution cipher that replaces each letter with the letter 13 positions after it in the alphabet. ROT13 is a special case of the Caesar cipher with a fixed shift of 13. Since there are 26 letters in the English alphabet, applying ROT13 twice returns the original text, making ROT13 its own inverse.
 
