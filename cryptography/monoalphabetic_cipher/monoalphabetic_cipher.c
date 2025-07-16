@@ -208,19 +208,3 @@ char *monoalphabetic_decrypt(char *ciphertext, const char *key) {
     }
     return ciphertext;
 }
-
-
-
-
-/*
-
-    # Compile
-    gcc -o substitution_cipher substitution_cipher.c
-
-    # Interactive mode
-    ./substitution_cipher
-
-    # Command line mode (example key: "zyxwvutsrqponmlkjihgfedcba" - reverse alphabet)
-    ./substitution_cipher zyxwvutsrqponmlkjihgfedcba e
-
-*/
