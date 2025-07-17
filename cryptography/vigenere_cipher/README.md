@@ -111,7 +111,7 @@ Uses an inverse key where each character is calculated as `26 - original_shift` 
 
 - The program preserves case (uppercase/lowercase)
 - Non-alphabetic characters (numbers, punctuation, spaces) remain unchanged
-- - Random key generation is seeded with current time for uniqueness
+- Random key generation is seeded with current time for uniqueness
 - Maximum input length is 255 characters _(can be adjusted in the code if needed)_
   - To change the maximum input length, modify the `MAX_INPUT_LENGTH` constant in the code (line 17: `#define MAX_INPUT_LENGTH 256`).
 - Maximum key length is 99 characters _(can be adjusted in the code if needed)_
