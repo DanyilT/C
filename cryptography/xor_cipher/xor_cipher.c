@@ -396,8 +396,10 @@ int main(int argc, char **argv) {
         }
 
         printf("Decrypted text: %s\n", text);
-        // printf("Hex representation: ");
-        // print_byte_sequence(text, decrypted_length);
+        printf("Press Enter to continue...");
+        while (getchar() != '\n'); // Wait for Enter key
+        printf("Decrypted text (byte sequence representation): ");
+        print_byte_sequence(text, decrypted_length);
     } else if (operation == 3) {
         // Brute Force Decrypt
         xor_brute_force(text);
