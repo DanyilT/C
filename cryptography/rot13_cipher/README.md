@@ -53,15 +53,19 @@ ROT13 shifts each letter by exactly 13 positions in the alphabet:
 - A becomes N, B becomes O, C becomes P, etc.
 - N becomes A, O becomes B, P becomes C, etc.
 
+| Original  | A     | B     | C     | D     | E     | F     | G     | H     | I     | J     | K     | L     | M     | N     | O     | P     | Q     | R     | S     | T     | U     | V     | W     | X     | Y     | Z     |
+|-----------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
+| **ROT13** | **N** | **O** | **P** | **Q** | **R** | **S** | **T** | **U** | **V** | **W** | **X** | **Y** | **Z** | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **H** | **I** | **J** | **K** | **L** | **M** |
+
 Since the English alphabet has 26 letters, shifting by 13 places twice (13 + 13 = 26) brings you back to the original letter.
 
 ## Examples
 
-**ROT13 Applied:**
+**Encryption:**
 - Original: `Hello World`
 - ROT13: `Uryyb Jbeyq`
 
-**ROT13 Applied Again (returns original):**
+**Decryption (same as encryption):**
 - ROT13: `Uryyb Jbeyq`
 - Original: `Hello World`
 
