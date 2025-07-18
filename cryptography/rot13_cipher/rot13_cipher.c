@@ -9,7 +9,6 @@
 
 #include <ctype.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 // Buffer for input (plaintext / ciphertext), can hold up to 255 characters (plus null terminator)
@@ -31,14 +30,14 @@ int main(int argc, char **argv) {
         text[MAX_INPUT_LENGTH - 1] = '\0'; // Ensure null termination
     } else {
         // Prompt the user for text input
-        printf("Enter text: ");
+        printf("Enter text (plaintext / ciphertext): ");
         fgets(text, sizeof(text), stdin); // Read text input from the user
         text[strcspn(text, "\n")] = '\0'; // Remove newline character
     }
 
     // Apply ROT13 (which is Caesar cipher with key 13)
     caesar_encrypt(text, ROT13_KEY);
-    printf("ROT13 result: %s\n", text);
+    printf("ROT13 result (ciphertext / plaintext): %s\n", text);
 
     return 0;
 }
