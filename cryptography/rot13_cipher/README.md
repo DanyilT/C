@@ -71,7 +71,7 @@ Since the English alphabet has 26 letters, shifting by 13 places twice (13 + 13 
 - Non-alphabetic characters (numbers, punctuation, spaces) remain unchanged
 - ROT13 encryption and decryption are identical operations
 - Maximum input length is 255 characters _(can be adjusted in the code if needed)_
-  - To change the maximum input length, modify the `MAX_INPUT_LENGTH` constant in the code (line 16: `#define MAX_INPUT_LENGTH 256`).
+  - To change the maximum input length, modify the `MAX_INPUT_LENGTH` constant in the code (line 15: `#define MAX_INPUT_LENGTH 256`).
 
 ## Relationship to Caesar Cipher
 
