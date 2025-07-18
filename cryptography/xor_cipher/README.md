@@ -169,12 +169,6 @@ The decryption process is identical to encryption. The ciphertext is XORed with 
 - Ciphertext: `97,76,69,69,70`
 - Output: All possible decryptions with their keys, highlighting printable results
 
-## Security Notes
-
-- XOR cipher with single byte/char keys is cryptographically weak
-- String keys provide better security but are still vulnerable to frequency analysis
-- Brute force attacks are feasible for short keys
-
 ## Performance Considerations
 
 - **Single key brute force**: Fast (256 attempts maximum)
@@ -182,6 +176,12 @@ The decryption process is identical to encryption. The ciphertext is XORed with 
   - Length 3: ~857,375 combinations
   - Length 4: ~81,450,625 combinations
   - Length 5+: Use with caution
+
+## Security Notes
+
+- XOR cipher with single byte/char keys is cryptographically weak
+- String keys provide better security but are still vulnerable to frequency analysis
+- Brute force attacks are feasible for short keys
 
 ## Notes
 
