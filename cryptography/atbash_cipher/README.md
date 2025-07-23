@@ -68,13 +68,6 @@ The Atbash cipher maps each letter to its position from the opposite end of the 
 - Ciphertext: `Svool Dliow`
 - Plaintext: `Hello World`
 
-## Historical Context
-
-- Originally used in Hebrew texts (6th-5th century BCE)
-- Found in the Hebrew Bible (Old Testament)
-- Name comes from Hebrew letters: Aleph-Taw-Beth-Shin (ATBŠ)
-- One of the oldest known ciphers
-
 ## Security Notes
 
 - The Atbash cipher is cryptographically very weak
@@ -86,9 +79,15 @@ The Atbash cipher maps each letter to its position from the opposite end of the 
 - The program preserves case (uppercase/lowercase)
 - Non-alphabetic characters (numbers, punctuation, spaces) remain unchanged
 - Atbash encryption and decryption are identical operations
-- 
 - Maximum input length is 255 characters _(can be adjusted in the code if needed)_
   - To change the maximum input length, modify the `MAX_INPUT_LENGTH` constant in the code (line 15: `#define MAX_INPUT_LENGTH 256`).
+
+## Historical Context
+
+- Originally used in Hebrew texts (6th-5th century BCE)
+- Found in the Hebrew Bible (Old Testament)
+- Name comes from Hebrew letters: Aleph-Taw-Beth-Shin (ATBŠ)
+- One of the oldest known ciphers
 
 ## License
 
