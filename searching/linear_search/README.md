@@ -63,10 +63,6 @@ Linear search checks every element in the array sequentially until the target el
 
 ## Example Usage
 
-- Array: [64, 34, 25, 12, 22, 11, 90]
-- Target: 22
-- Result: Found at index 4
-
 ### Normal Execution
 ```
 Linear Search
