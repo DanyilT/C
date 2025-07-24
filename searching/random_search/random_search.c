@@ -216,14 +216,10 @@ int random_search(void *arr, int size, char type, void *target, int visualize) {
                 return -2; // Unknown type
         }
 
-        if (visualize) {
-            if (checked[random_index]) {
-                printf(YELLOW "~ Already checked this index\n" RESET);
-            } else {
-                printf(RED "✗ No match\n" RESET);
-                checked[random_index] = 1;
-            }
-        }
+        if (visualize && checked[random_index]) printf(YELLOW "~ Already checked this index\n" RESET);
+        else if (visualize && !checked[random_index]) printf(RED "✗ No match\n" RESET);
+
+        checked[random_index] = 1;
 
         // If all indices have been checked, break early
         int all_checked = 1;
