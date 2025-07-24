@@ -6,6 +6,10 @@ A comprehensive implementation of the Playfair cipher encryption and decryption 
 
 The Playfair cipher is a digraph substitution cipher, meaning it encrypts pairs of letters (digraphs) rather than individual letters. Invented by Charles Wheatstone in 1854 but popularized by Lord Playfair, it uses a 5×5 grid of letters as the key. The cipher was notably used during the Boer War and World War I. Unlike simple substitution ciphers, Playfair operates on letter pairs, making it significantly more secure against frequency analysis.
 
+> **Cipher Type**: Substitution Cipher
+> - Encrypts pairs of letters (digraphs)
+> - Key required (5×5 grid based on keyword)
+
 ## Features
 
 - **Encryption**: Encrypt plaintext using a keyword-based 5×5 grid

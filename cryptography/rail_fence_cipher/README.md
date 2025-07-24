@@ -14,6 +14,10 @@ H   O   R
 
 Reading row by row gives: `HOREL OLLWD`
 
+> **Cipher Type**: Transposition Cipher
+> - Zigzag pattern
+> - Key required (number of rails)
+
 ## Features
 
 - **Encryption**: Encrypt plaintext using a specified number of rails

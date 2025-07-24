@@ -6,6 +6,10 @@ A comprehensive implementation of the XOR cipher encryption and decryption algor
 
 The XOR cipher is a simple encryption technique that uses the XOR (exclusive OR) bitwise operation to encrypt and decrypt data. Each byte of the plaintext is XORed with a key byte. The same operation is used for both encryption and decryption, making XOR ciphers symmetric. XOR ciphers can use single bytes, characters, strings, or byte sequences as keys.
 
+> **Cipher Type**: XOR Cipher
+> - Encrypts data using the XOR operation
+> - Key required (single byte, character, string, or byte sequence)
+
 ## Features
 
 - **Encryption**: Encrypt plaintext using specified key

@@ -9,6 +9,10 @@ The Atbash cipher is a substitution cipher originally used for the Hebrew alphab
 
 The cipher is symmetric, meaning the same process is used for both encryption and decryption.
 
+> **Cipher Type**: Substitution Cipher
+> - Reversed alphabet
+> - No key required (self-inverse)
+
 ## Features
 
 - **Encryption/Decryption**: Atbash encryption and decryption are the same operation

@@ -6,6 +6,10 @@ A simple implementation of the Vigenère cipher encryption and decryption algori
 
 The Vigenère cipher is a polyalphabetic substitution cipher that uses a keyword to encrypt text. Unlike the Caesar cipher which uses a single shift for all letters, the Vigenère cipher uses different shifts for each letter based on the repeating keyword. Each letter of the keyword determines the shift value for the corresponding position in the text. For example, with keyword "KEY", the first letter uses shift K(10), second uses E(4), third uses Y(24), fourth uses K(10) again, and so on. This makes it much more secure than simple substitution ciphers because the same letter can be encrypted differently depending on its position.
 
+> **Cipher Type**: Substitution Cipher
+> - Encrypts using a keyword
+> - Key required (alphabetic keyword)
+
 ## Features
 
 - **Encryption**: Encrypt plaintext using an alphabetic keyword

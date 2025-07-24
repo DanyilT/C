@@ -6,6 +6,10 @@ A simple implementation of the Monoalphabetic Substitution cipher encryption and
 
 The Monoalphabetic Substitution cipher is a type of substitution cipher where each letter in the plaintext is replaced by another letter from the alphabet. Unlike the Caesar cipher which uses a fixed shift, this cipher uses a complete alphabet permutation as the key. Each letter of the alphabet is mapped to exactly one other letter, creating a one-to-one correspondence.
 
+> **Cipher Type**: Substitution Cipher
+> - Custom letter mapping
+> - Key required (alphabet permutation)
+
 ## Features
 
 - **Encryption**: Encrypt plaintext using a 26-character substitution key

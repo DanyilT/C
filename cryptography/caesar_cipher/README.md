@@ -6,6 +6,10 @@ A simple implementation of the Caesar cipher encryption and decryption algorithm
 
 The Caesar cipher is one of the simplest and most widely known encryption techniques. It is a type of substitution cipher where each letter in the plaintext is shifted by a fixed number of positions in the alphabet. For example, with a shift of 3, 'A' becomes 'D', 'B' becomes 'E', and so on.
 
+> **Cipher Type**: Substitution Cipher
+> - Shifted alphabet
+> - Key required (shift value)
+
 ## Features
 
 - **Encryption**: Encrypt plaintext using a specified shift value (key)
