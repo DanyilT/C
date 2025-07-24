@@ -123,10 +123,9 @@ int main(int argc, char *argv[]) {
  */
 void bubble_sort(void *arr, int size, char type, int visualize) {
     if (visualize) printf(BOLD "\nStep-by-step sorting:\n" RESET);
-    int pass = 1;
 
     for (int i = 0; i < size - 1; i++) {
-        if (visualize) printf(CYAN "Pass %d:\n" RESET, pass++);
+        if (visualize) printf(CYAN "Pass %d:\n" RESET, i + 1);
 
         int swapped = 0;
         for (int j = 0; j < size - i - 1; j++) {
@@ -178,7 +177,7 @@ void bubble_sort(void *arr, int size, char type, int visualize) {
         }
 
         if (visualize) {
-            printf("  End of pass %d: ", pass - 1);
+            printf("  End of pass %d: ", i + 1);
             print_array(arr, size, type);
             printf("\n");
         }
