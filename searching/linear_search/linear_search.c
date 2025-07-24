@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "ansi_colors.h" // Include ANSI color codes for console output (custom header file)
 
 #define STRING_LENGTH 50
 
@@ -100,41 +101,42 @@ int main() {
             return 1;
     }
 
-    printf("\n-- Search --\n");
-    printf("Array: ");
+    printf(CYAN "\n-- Search --\n" RESET);
+    printf("Array: " DIM);
     print_array(arr, size, type);
+    printf(RESET);
 
     int result = linear_search(arr, size, type, target);
     switch (type) {
         case 'i':
             if (result != -1)
-                printf("Integer %d found at index %d (arr[%d] == %d)\n", *(int*)target, result, result, ((int*)arr)[result]);
+                printf(GREEN "Integer %d found at index %d" BOLD " (arr[%d] == %d)\n" RESET, *(int*)target, result, result, ((int*)arr)[result]);
             else
-                printf("Integer %d not found\n", *(int*)target);
+                printf(RED "Integer %d not found\n" RESET, *(int*)target);
             break;
         case 'f':
             if (result != -1)
-                printf("Float %.2f found at index %d (arr[%d] == %.2f)\n", *(float*)target, result, result, ((float*)arr)[result]);
+                printf(GREEN "Float %.2f found at index %d" BOLD " (arr[%d] == %.2f)\n" RESET, *(float*)target, result, result, ((float*)arr)[result]);
             else
-                printf("Float %.2f not found\n", *(float*)target);
+                printf(RED "Float %.2f not found\n" RESET, *(float*)target);
             break;
         case 'c':
             if (result != -1)
-                printf("Character '%c' found at index %d (arr[%d] == '%c')\n", *(char*)target, result, result, ((char*)arr)[result]);
+                printf(GREEN "Character '%c' found at index %d" BOLD " (arr[%d] == '%c')\n" RESET, *(char*)target, result, result, ((char*)arr)[result]);
             else
-                printf("Character '%c' not found\n", *(char*)target);
+                printf(RED "Character '%c' not found\n" RESET, *(char*)target);
             break;
         case 's':
             if (result != -1)
-                printf("String \"%s\" found at index %d (arr[%d] == \"%s\")\n", (char*)target, result, result, ((char(*)[STRING_LENGTH])arr)[result]);
+                printf(GREEN "String \"%s\" found at index %d" BOLD " (arr[%d] == \"%s\")\n" RESET, (char*)target, result, result, ((char(*)[STRING_LENGTH])arr)[result]);
             else
-                printf("String \"%s\" not found\n", (char*)target);
+                printf(RED "String \"%s\" not found\n" RESET, (char*)target);
             break;
         default:
             if (result != -1)
-                printf("Element found at index %d (arr[%d])\n", result, result);
+                printf(GREEN "Element found at index %d" BOLD " (arr[%d])\n" RESET, result, result);
             else
-                printf("Element not found\n");
+                printf(RED "Element not found\n" RESET);
     }
 
     free(arr);
