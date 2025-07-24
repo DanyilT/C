@@ -125,7 +125,7 @@ void selection_sort(void *arr, int size, char type, int visualize) {
     if (visualize) printf(BOLD "\nStep-by-step sorting:\n" RESET);
 
     for (int i = 0; i < size - 1; i++) {
-        if (visualize) printf(CYAN "\nPass %d: Finding minimum in unsorted portion...\n" RESET, i + 1);
+        if (visualize) printf(CYAN "Pass %d: Finding minimum in unsorted portion...\n" RESET, i + 1);
 
         // Find minimum element in remaining unsorted array
         int min_index = i;
