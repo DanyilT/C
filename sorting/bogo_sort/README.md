@@ -72,7 +72,7 @@ The algorithm relies purely on chance and has no intelligent strategy for sortin
 ```
 Bogo Sort
 =========
-⚠️  WARNING: Bogo Sort is extremely inefficient! Use small arrays only.
+⚠  WARNING: Bogo Sort is extremely inefficient! Use small arrays only.
 Choose data type:
 1. Integers
 2. Floats
@@ -98,7 +98,7 @@ Sorting...
 Bogo Sort
 =========
 Visualization enabled.
-⚠️  WARNING: Bogo Sort is extremely inefficient! Use small arrays only.
+⚠  WARNING: Bogo Sort is extremely inefficient! Use small arrays only.
 Choose data type:
 1. Integers
 2. Floats
